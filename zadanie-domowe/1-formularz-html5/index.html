@@ -1,0 +1,65 @@
+<!-- 
+Stwórz formularz, który pozwoli na zapis uczestnika na szkolenie - pola:
+
+- imię
+- nazwisko 
+- mail
+- telefon
+- wybór miasta (Kraków, Warszawa, Gdańsk) - select
+- płeć - radio
+- zgoda na dane osobowe - checkbox
+- wiadomość - textarea
+
+Zadanie wyślij za pomocą GitHub Pages.
+
+Podpowiedź przed wysłaniem zadania do sprawdzenia:
+- sprawdź dopasowanie labelek do pól formularza
+- sprawdź, czy formularz wysyła maile na Twój adres z wykorzystaniem serwisu https://formspree.io/
+- sprawdź poprawność składni w walidatorze W3C https://validator.w3.org/ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://formspree.io/mich.piaskowski@gmail.com" method="POST">
+        <p>Imię:</p>
+        <input type="text" name="name" required placeholder="Podaj imię">
+        <p>Nazwisko:</p>
+        <input type="text" name="lastName" required placeholder="Podaj nazwisko">
+        <p>Mail:</p>
+        <input type="email" name="email" required placeholder="Podaj adres e-mail">
+        <p>Telefon:</p>
+        <input type="tel" name="telNumber" required placeholder="Podaj nr telefonu">
+        <p>Wybierz miasto:</p>
+        <select name="town">
+            <option value="Warszawa" selected>Warszawa</option>
+            <option value="Kraków">Kraków</option>
+            <option value="Gdańsk">Gdańsk</option>
+        </select>
+        <p>Wybierz płeć:</p>
+        <div id="gender">
+            <input type="radio" name="gender" value="male" checked>Mężczyzna
+            <input type="radio" name="gender" value="female">Kobieta
+        </div>
+        <p>Zgoda na przetwarzanie danych osobowych:</p>
+        <label for="rodo">
+            <input type="checkbox" name="rodo" id="rodo" required>
+            Zgadzam się
+        </label>
+        <p>Wiadomość</p>
+        <textarea name="message" cols="30" rows="10" placeholder="Napisz do nas"></textarea>
+        <br>
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+
+</html>
