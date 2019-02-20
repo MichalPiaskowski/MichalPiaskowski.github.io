@@ -47,8 +47,12 @@ Podpowiedź przed wysłaniem zadania do sprawdzenia:
         </select>
         <p>Wybierz płeć:</p>
         <div id="gender">
-            <input type="radio" name="gender" value="male" checked>Mężczyzna
-            <input type="radio" name="gender" value="female">Kobieta
+            <label for="male">
+                <input type="radio" name="gender" value="male" id="male" checked>Mężczyzna
+            </label>
+            <label for="female"> 
+                <input type="radio" name="gender" value="female" id="female">Kobieta
+            </label>
         </div>
         <p>Zgoda na przetwarzanie danych osobowych:</p>
         <label for="rodo">
