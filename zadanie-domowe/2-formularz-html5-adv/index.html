@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form action="https://formspree.io/mich.piaskowski@gmail.com" method="POST" autocomplete="on">
+        <h2>a simple form</h2>
+        <h3>form fundamental</h3>
+        <fieldset id="customerInfo">
+            <legend>Customer Info</legend>
+            <label for="userName"> Name:
+                <input type="text" id="userName" name="userName" placeholder="Enter your name" required autofocus>
+            </label>
+            <label for="userTelephone"> Telephone:
+                <input type="tel" id="userTelephone" name="userTelephone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="1-234-567-8910" required>
+            </label>
+            <label for="userEmail">
+                Email address: <input type="email" id="userEmail" name="userEmail" placeholder="Enter your email address"
+                    multiple required>
+            </label>
+        </fieldset>
+        <fieldset id="books">
+            <legend>Books</legend>
+            <input type="text" list="bookList">
+            <datalist id="bookList">
+                <option>Book 1</option>
+                <option>Book 2</option>
+                <option>Book 3</option>
+                <option>Book 4</option>
+                <option>Book 5</option>
+            </datalist>
+            <label for="quantity">Quantity (Maximum 5):
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
