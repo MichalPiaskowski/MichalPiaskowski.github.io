@@ -7,7 +7,7 @@
 html {
     font-size: 10px;
     color: white;
-    font-family: arial;
+    font-family: verdana;
 }
 
 header {
@@ -20,9 +20,11 @@ header {
 
 div.container {
     position: absolute;
-    top: 45%;
-    left: 3%;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
     text-transform: uppercase;
+    padding-left: 10px;
 }
 
 header p {
@@ -43,8 +45,11 @@ header h1 {
     }
 
     div.container {
-        top: 20%;
-        left: 60%;
+        top: 0%;
+        right: 0;
+        left: auto;
+        transform: translateY(0%);
+        padding: 8vh 7vw 0 0;
     }
 
     header p {
@@ -71,6 +76,7 @@ header h1 {
         right: 0%;
         text-align: center;
         color: black;
+        padding: 0;
     }
 
 }
