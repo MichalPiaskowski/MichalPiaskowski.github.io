@@ -73,7 +73,7 @@ div.product4 {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 480px) {
     div.products {
         flex-basis: 100%;
     }
