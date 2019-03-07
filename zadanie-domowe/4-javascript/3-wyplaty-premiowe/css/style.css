@@ -1,0 +1,96 @@
+/* STYLE GLOBALNE */
+span,
+input,
+#title,
+button {
+    display: inline-block;
+}
+
+/* STYLOWANIE GŁÓWNEGO KONTENERA */
+#pracownicy {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 510px;
+}
+
+/* STYLOWANIE TYTUŁU TABELI */
+#title {
+    display: flex;
+    justify-content: flex-start;
+    border: 2px solid black;
+}
+
+span#tytul-pracownik {
+    width: 50%;
+    text-transform: uppercase
+}
+
+span#tytul-czas,
+span#tytul-stawka,
+span#tytul-wyplata {
+    width: 15%;
+    text-transform: uppercase
+}
+
+/* STYLOWANIE WIERSZY TABELI */
+#pracownicy div {
+    display: flex;
+    justify-content: space-between;
+    line-height: 160%;
+}
+
+#pracownicy div:nth-of-type(n+4) {
+    border-top: 2px solid gray;
+}
+
+#pracownicy div:nth-last-child(1) {
+    border-top: none;
+}
+
+span.pracownik {
+    min-width: 50%;
+}
+
+input,
+span.wyplata {
+    width: 15%;
+    border: none;
+    background-color: transparent;
+}
+
+/* STYLOWANIE PRZYCISKU*/
+button {
+    box-sizing: border-box;
+    width: 160px;
+    height: 50px;
+    margin: 30px 0px 20px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4%;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.2s linear;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    letter-spacing: 0px;
+    width: 150px;
+}
+
+/* STYLOWANIE NAJLEPSZYCH PRACOWNIKÓW */
+div#pracownicy div:nth-last-child(1) {
+    display: flex;
+    flex-direction: column;
+}
