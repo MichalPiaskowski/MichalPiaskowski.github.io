@@ -1,0 +1,67 @@
+/* Global */
+span {
+    display: inline-block;
+    width: 200px;
+}
+
+div {
+    margin-top: 5px;
+    width: auto;
+}
+
+input {
+    width: 40px;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+/* Main cointainer */
+#uczniowie {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 780px;
+}
+
+/* Header */
+h2 {
+    margin-bottom: 200px;
+}
+
+/* Tabel title */
+#title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-90deg);
+    width: 150px;
+    left: 340px;
+    line-height: 48px;
+    top: -210px;
+}
+
+span.tytul.uczen {
+    margin-bottom: 110px;
+}
+
+#title span.tytul.srednia {
+    margin: 150px 0 0 0;
+    width: auto;
+}
+
+/* Table rows */
+span.srednia {
+    width: 40px;
+    font-weight: bold;
+}
+
+input[class='zajecia-dodatkowe'] {
+    width: 200px
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+}
