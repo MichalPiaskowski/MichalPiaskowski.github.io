@@ -1,0 +1,35 @@
+.faq {
+    margin-top: 80px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.faq__title {
+    position: relative;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: grey;
+}
+
+.faq__title::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    top: 100%;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    border-bottom: 1px #ddd solid;
+}
+
+.accordion {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.btn {
+    color: orange;
+}
