@@ -1,0 +1,48 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.skills {
+    text-align: center;
+    margin-top: 60px;
+}
+
+header {
+    margin-bottom: 80px;
+}
+
+h2 {
+    position: relative;
+    color: gray;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    top: 100%;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    border-bottom: 1px #ddd solid;
+}
+
+.row div {
+    margin-bottom: 50px;
+
+}
+
+.row i {
+    font-size: 80px;
+    color: orange;
+    background-color: #eee;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+}
+
+.row p {
+    margin-top: 20px;
+}
