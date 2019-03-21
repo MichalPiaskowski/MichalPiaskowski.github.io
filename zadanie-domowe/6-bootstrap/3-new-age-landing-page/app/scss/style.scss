@@ -1,0 +1,299 @@
+// ---------------------
+// ---- @imports -------
+// ---------------------
+@import "partials";
+
+
+// ---------------------
+// ---- GLOBALS --------
+// ---------------------
+html {
+    font-size: $base-font-size;
+    font-family: $primary-font-family;
+    color: $dark-font;
+}
+
+.btn {
+    margin-right: auto;
+    font-size: 1rem;
+    padding: .8rem 3rem;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+}
+
+.link-mask {
+    @include link-mask;
+}
+
+.phone-container {
+    @include flex-center-X-Y;
+    height: 70vh;
+    background: url(../assets/images/phone.png) no-repeat center center / contain;
+
+    .phone-screen {
+        width: auto;
+        height: 70vh;
+        transform: scale(0.78);
+        background: url(../assets/images/screen.jpg) no-repeat center center / contain;
+        border-radius: 0.5rem;
+    }
+}
+
+// ---------------------
+// ---- NAVIGATION -----
+// ---------------------
+.navbar {
+    max-width: $max-content-width;
+    margin: 0 auto;
+
+    .navbar-brand {
+        // margin-right: auto;
+        color: $primary-bg-color;
+    }
+
+    .collapse {
+        justify-content: flex-end;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+
+        .nav-link {
+            color: $light-dark-font;
+        }
+    }
+}
+
+
+// ---------------------
+// ---- HEADER ---------
+// ---------------------
+.main-header {
+    min-height: 100vh;
+    background: url(../assets/images/bg-pattern.png) repeat, linear-gradient(to right, $first-gradient-color, $second-gradient-color);
+    padding: $section-padding;
+
+    .heading-container {
+        @include flex-center-X-Y;
+        padding: 5rem 0;
+
+        h1 {
+            color: $light-font;
+            font-size: $medium-heading-font-size;
+            font-weight: 400;
+            margin-bottom: 3rem;
+        }
+    }
+
+
+}
+
+// ---------------------
+// ---- PRODUCT --------
+// ---------------------
+.product {
+    background-color: $primary-bg-color;
+    padding: $section-padding;
+
+    .container {
+        @include flex-center-X-Y;
+    }
+
+    h2 {
+        font-size: $large-heading-font-size;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    p {
+        @include tittle-caption;
+    }
+
+    .app-dowload--container {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+
+        .app-download {
+            height: 4.2rem;
+            width: 48%;
+            background: no-repeat center center / contain;
+            position: relative;
+        }
+
+        .android {
+            background-image: url(../assets/images/google-play-badge.png);
+        }
+
+        .apple {
+            background-image: url(../assets/images/app-store-badge.png);
+        }
+    }
+}
+
+// ---------------------
+// ---- FEATURES -------
+// ---------------------
+.features {
+    padding: $section-padding;
+    padding-bottom: 2rem;
+
+    .heading-container {
+        @include flex-center-X-Y;
+        padding-bottom: 7rem;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: $medium-heading-font-size;
+    }
+
+    p {
+        @include tittle-caption;
+        color: $light-darker-font;
+    }
+
+    .feature-list-container {
+        @include flex-center-X-Y;
+        padding: 5rem 0;
+
+        .feature {
+            text-align: center;
+            padding: 2.5rem;
+
+            i.fas {
+                color: $primary-icon-color;
+                font-size: 6rem;
+            }
+
+        }
+    }
+}
+
+// ---------------------
+// ---- CALL TO ACTION -
+// ---------------------
+.call-to-action {
+    min-height: 80vh;
+    background: url(../assets/images/bg-cta.jpg) no-repeat center center / cover;
+    position: relative;
+    z-index: 0;
+
+    .heading-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .double-heading {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: $large-heading-font-size *1.2;
+        font-weight: 300;
+        color: $light-font;
+    }
+
+    &::after {
+        @include darkening-mask;
+    }
+}
+
+// ---------------------
+// ---- CONTACT --------
+// ---------------------
+.contact {
+    @include flex-center-X-Y;
+    min-height: 30vh;
+    background-color: $primary-bg-color;
+    text-align: center;
+
+    h2 {
+        font-size: $medium-heading-font-size;
+        font-weight: 300;
+
+        span {
+            color: #dd4b39;
+        }
+    }
+
+    .contact-icons {
+        margin-top: 2rem;
+
+        .fab {
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+            margin: .4rem;
+            font-size: 2.5rem;
+            line-height: 5rem;
+            color: $light-font;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s ease-in;
+            border: 1px solid transparent;
+        }
+
+        .fa-twitter {
+            background-color: #38A1F3;
+        }
+
+        .fa-twitter:hover {
+            background-color: $light-font;
+            color: #38A1F3;
+            border: 1px solid #38A1F3;
+        }
+
+        .fa-facebook-f {
+            background-color: #4267b2;
+        }
+
+        .fa-facebook-f:hover {
+            background-color: $light-font;
+            color: #4267b2;
+            border: 1px solid #4267b2;
+        }
+
+        .fa-google-plus-g {
+            background-color: #dd4b39;
+        }
+
+        .fa-google-plus-g:hover {
+            background-color: $light-font;
+            color: #dd4b39;
+            border: 1px solid #dd4b39;
+        }
+
+    }
+}
+
+// ---------------------
+// ---- FOOTER ---------
+// ---------------------
+
+.footer {
+    @include flex-center-X-Y;
+    min-height: 10vh;
+    text-align: center;
+    background-color: $dark-bg-color;
+    color: $light-darker-font;
+
+    .copyright {
+        margin: 0;
+        padding-bottom: .5rem;
+    }
+
+    .footer-links a {
+        color: inherit;
+        text-decoration: none;
+        padding: 0 .3rem;
+    }
+
+    .footer-links a:hover {
+        color: $light-font;
+    }
+
+}

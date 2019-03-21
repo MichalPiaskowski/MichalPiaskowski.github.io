@@ -1,0 +1,78 @@
+// twitter color - #38A1F3
+// facebook color - #4267b2
+// goggle+ color - #dd4b39
+// font-family: 'Open Sans', sans-serif;
+
+// ---------------------
+// ---- @imports -------
+// ---------------------
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext');
+
+// ---------------------
+// ---- Sizings --------
+// ---------------------
+$max-content-width: 60%;
+$base-font-size: 10px;
+$large-heading-font-size: 4.5rem;
+$medium-heading-font-size: 3.3rem;
+$section-padding: 15vh 10vw;
+
+// ---------------------
+// ---- Bg-colors ------
+// ---------------------
+$first-gradient-color: #db2430;
+$second-gradient-color: #85408d;
+$primary-bg-color: #fdcb4f;
+$dark-bg-color: #202020;
+
+// ---------------------
+// ---- Font colors ----
+// ---------------------
+$light-font: #fff;
+$dark-font: #000;
+$light-dark-font: #ddd;
+$light-darker-font: #aaa;
+$primary-icon-color: #a5366b;
+
+
+// ---------------------
+// ---- Font family ----
+// ---------------------
+$primary-font-family: 'Open Sans',
+sans-serif;
+
+// ---------------------
+// ---- @mixins --------
+// ---------------------
+@mixin flex-center-X-Y {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin link-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+@mixin tittle-caption {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5px 0;
+}
+
+@mixin darkening-mask {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.6);
+    z-index: -1;
+}
