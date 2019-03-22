@@ -1,0 +1,43 @@
+// ------------------
+// -- Imports -------
+// ------------------
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=latin-ext');
+
+// ------------------
+// -- Sizing --------
+// ------------------
+$base-font-size: 10px;
+$section-padding: 7vh 0;
+
+// ------------------
+// -- Fonts ---------
+// ------------------
+$primary-font: 'Roboto',
+sans-serif;
+
+// ------------------
+// -- Font-Colors ---
+// ------------------
+$dark-font: #000;
+$semi-ligth-font: #b3b3b3;
+$light-font: #fff;
+
+// ------------------
+// -- BG-Colors -----
+// ------------------
+$dark-background: #215398;
+$semi-ligth-background: #F5F5F5; //#b3b3b3; //#F5F5F5;
+$ligth-background: #fff;
+$decor-background: #ff3859;
+
+// ---------------------
+// ---- @mixins --------
+// ---------------------
+@mixin link-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}

@@ -1,0 +1,153 @@
+// Przy kodowaniu prośba o:
+
+// - wykonanie w RWD,
+// - użycie LESS lub SASS,
+// - użycie Grunt.js, Gulp.js lub Webpack,
+// - dostosowanie obrazków do wyświetlaczy retina / hdpi,
+// - modułowy kod, tak żeby np. białe box’y można było wykorzystać w różnych miejscach na stronie,
+// - zachowanie prawidłowej struktury nagłówków z punktu widzenia SEO,
+// - kompatybilność z IE10+, Android Browser 4.4+ oraz najnowszymi wersjami Chrome, Firefox, Opera, Safari, Edge.
+// - wykonanie najlepiej jak potrafisz
+
+
+// ------------------
+// -- Imports -------
+// ------------------
+@import 'partials';
+
+
+
+// ------------------
+// -- Global --------
+// ------------------
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    font-family: $primary-font;
+    text-align: center;
+    color: $dark-font;
+}
+
+
+// ------------------
+// -- Modules -------
+// ------------------
+.heading-container {
+    .section-main-heading {
+        font-size: 2.7rem;
+    }
+
+    .heading-caption {
+        font-size: 1.3rem;
+        padding: .5rem 0;
+        font-weight: 300;
+    }
+}
+
+.row {
+    justify-content: center;
+    margin: 0;
+
+    .box-content {
+        background-color: $ligth-background;
+        padding: 2.5rem 1rem;
+        margin: 1rem;
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            color: $semi-ligth-font;
+        }
+
+        .fab {
+            position: relative;
+            font-size: 2.8rem;
+            color: $semi-ligth-font;
+
+            .link-mask {
+                @include link-mask;
+            }
+        }
+    }
+}
+
+
+// ------------------
+// -- Navigation ----
+// ------------------
+.navbar {
+    padding: 1.5rem;
+
+    .logo {
+        position: relative;
+        margin-left: 15%;
+
+        img {
+            width: 70%;
+        }
+
+        .link-mask {
+            @include link-mask;
+        }
+    }
+}
+
+
+// ------------------
+// -- Header --------
+// ------------------
+.main-header {
+    position: relative;
+    min-height: 50vh;
+    background-color: $dark-background;
+    padding: $section-padding;
+
+    .heading-container {
+        color: $light-font;
+    }
+
+    &::after {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-color: $decor-background;
+        border-radius: 50%;
+    }
+}
+
+
+// ------------------
+// -- Section1 ------ //Insert adequate name here
+// ------------------
+.semantically-adequate-class-name {
+    min-height: 50vh;
+    background-color: $semi-ligth-background;
+    padding: $section-padding;
+
+    .heading-caption {
+        color: $semi-ligth-font;
+    }
+
+    h3 {
+        margin: 2rem auto;
+    }
+}
+
+
+// ------------------
+// -- @media --------
+// ------------------
+
+@media (max-width: 576px) {
+    html {
+        font-size: $base-font-size * 1.5;
+    }
+}
